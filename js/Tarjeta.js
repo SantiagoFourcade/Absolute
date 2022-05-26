@@ -9,6 +9,7 @@ var mesExpiracion = document.querySelector("#tarjeta #expiracion .mes");
 var yearExpiracion = document.querySelector("#tarjeta #expiracion .year");
 var ccv = document.querySelector("#tarjeta .ccv");
 
+
 //*Volteamos la tarjeta para mostrar el frente
 
 const mostrarFrente = () => {
@@ -17,13 +18,7 @@ const mostrarFrente = () => {
   }
 };
 
-//*Girar tarjeta
 
-const girarTarjeta = () => {
-    if(!tarjeta.classList.contains("active")){
-        tarjeta.classList.remove("active");
-    }
-};
 
 //*Rotacion Tarjeta
 
@@ -142,4 +137,21 @@ formulario.inputCCV.addEventListener("keyup", (e) => {
     ccv.textContent = formulario.inputCCV.value;
 
     girarTarjeta();
+});
+
+//* Finalizar compra
+const btnSubmit = document.getElementById("btnSubmit");
+btnSubmit.addEventListener("click", (e) => {
+ e.preventDefault();
+  
+  Swal.fire({
+    title: 'Sweet!',
+    text: 'Gracias por su compra!',
+    imageUrl: 'https://i0.wp.com/lacriaturacreativa.com/wp-content/uploads/2020/10/absolut-700x405.png',
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: 'Custom image',
+  });
+
+  
 });

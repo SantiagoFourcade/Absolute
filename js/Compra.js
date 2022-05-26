@@ -54,6 +54,14 @@ const addCarrito = (e) => {
     setCarrito(e.target.parentElement);
   }
   e.stopPropagation();
+
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Agregado al carrito',
+    showConfirmButton: false,
+    timer: 1500
+  });
 };
 
 const setCarrito = (objeto) => {
@@ -130,10 +138,10 @@ const pintarFooter = () => {
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
+      confirmButtonText: "Si, eliminar!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire("Deleted!", "El carrito se encuentra vacio", "success");
+        Swal.fire("Eliminado!", "El carrito se encuentra vacio", "success");
       }
     });
   });

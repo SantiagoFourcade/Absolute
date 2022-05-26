@@ -12,7 +12,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 15%;
-  background-color: #1c1c1c; }
+  /*background-color: rgb(28, 28, 28);*/
+  background: url(../img/absolut-700x405.webp); }
 
 .logo {
   cursor: pointer;
